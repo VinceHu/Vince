@@ -1,236 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>罗氏学院 - 测试用例</title>
-	<link rel="stylesheet" href="css/master.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
-</head>
-<body>
-	<div class="container">
-		<div class="site-header">
-			<div class="lang-select">
-				<div class="lang-en"><a href="#">English</a></div>
-				<div class="lang-zh"><a href="#" class="active">中文</a></div>
-			</div>
-			<h1>罗氏中国学院 ROCHE CHINA ACADEMY</h1>
-			<div class="brand-logo"><img src="images/logo_icon.png" alt=""></div>
-		</div>
-		<ul class="site-menu">
-			<li class="home on"><a href="#">首页</a></li>
-			<li class="intro"><a href="#">学院介绍</a></li>
-			<li class="study">
-				<a href="#">学习</a>
-				<dl class="sub-menu">
-					<dd><a href="">概念/原理</a></dd>
-					<dd><a href="">学习地图</a></dd>
-					<dd><a href="">应用Apps</a></dd>
-					<dd><a href="">我的课程</a></dd>
-					<dd><a href="">课程信息</a></dd>
-				</dl>
-			</li>
-			<li class="develop"><a href="#">发展</a></li>
-			<li class="employee"><a href="#">新员工</a></li>
-			<li class="start"><a href="#">开始我的学习</a></li>
-		</ul>
-		<div class="site-content clearfix">
-			<div class="content-left">
-				<div class="calendar-section">
-					<h3 class="calendar-title">课程日历</h3>
-					<div id="calendar">
-					  <script type="text/template" id="template-calendar">
-				        <div class="clndr-controls">
-				          <div class="clndr-previous-button">&lsaquo;</div>
-				          <div class="month"><%= month %> <%= year %></div>
-				          <div class="clndr-next-button">&rsaquo;</div>
-				        </div>
-				        <div class="clndr-grid">
-				          <div class="days-of-the-week">
-				            <% _.each(daysOfTheWeek, function(day) { %>
-				              <div class="header-day"><%= day %></div>
-				            <% }); %>
-				            <div class="days">
-				              <% _.each(days, function(day) { %>
-				                <div class="<%= day.classes %>"><%= day.day %></div>
-				              <% }); %>
-				            </div>
-				          </div>
-				        </div>
-				      </script>
-					</div>
-					<div class="calendar-event month-event">
-						<div class="event-header">
-							<h3>当月课程</h3>
-							<dl>
-								<dt>month</dt>
-								<dd>12</dd>
-							</dl>
-						</div>
-						<div class="course-list">
-							<dl class="course-item">
-								<dt>当月课程 01</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-							<dl class="course-item">
-								<dt>当月课程 01</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-							<dl class="course-item">
-								<dt>当月课程 01</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-							<dl class="course-item">
-								<dt>当月课程 01</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-						</div>
-						<div class="course-pager">
-							<div class="course-pager-item">
-								<a class="active" href="">1</a>
-							</div>
-							<div class="course-pager-item">
-								<a class="" href="">2</a>
-							</div>
-							<div class="course-pager-item">
-								<a class="" href="">3</a>
-							</div>
-						</div>
-					</div>
-					<div class="calendar-event day-event">
-						<div class="event-header">
-							<h3>当日课程</h3>
-							<dl>
-								<dt>date</dt>
-								<dd>18</dd>
-							</dl>
-						</div>
-						<div class="course-list">
-							<dl class="course-item">
-								<dt>当日课程 01</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-							<dl class="course-item">
-								<dt>当日课程 02</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-							<dl class="course-item">
-								<dt>当日课程 03</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-							<dl class="course-item">
-								<dt>当日课程 04</dt>
-								<dd>时间: 16:00-17:00<span>2013-08-10</span></dd>
-							</dl>
-						</div>
-						<div class="course-pager">
-							<div class="course-pager-item">
-								<a class="active" href="">1</a>
-							</div>
-							<div class="course-pager-item">
-								<a class="" href="">2</a>
-							</div>
-							<div class="course-pager-item">
-								<a class="" href="">3</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="content-right">
-				<div class="carousel">
-					<ul id="slide-plane">
-						<li><a href=""><img src="images/photo.png" title="<b>Image1 rotation Title</b>Image rotation Content Image rotation Content,Image rotation Content Image rotation Content"></a></li>
-						<li><a href=""><img src="images/photo.png" title="<b>Image2 rotation Title</b>Image rotation Content Image rotation Content,Image rotation Content Image rotation Content"></a></li>
-						<li><a href=""><img src="images/photo.png" title="<b>Image3 rotation Title</b>Image rotation Content Image rotation Content,Image rotation Content Image rotation Content"></a></li>
-					</ul>
-					<div id="slide-ctrl">
-						<div class="slider-prev"></div>
-						<div class="slider-next"></div>
-					</div>
-				</div>
-				<div class="row clearfix">
-					<div class="video-section">
-						<div class="video-header">
-							<h3>视频</h3>
-						</div>
-						<div class="video-con">
-							<div class="video-show">
-								<a class="fancybox-video" data-fancybox-type="iframe" href="videos/demo.html">
-									<img src="images/video_img.jpg" alt="">
-								</a>
-							</div>
-							<dl class="video-info">
-								<dt>October 01, 2013</dt>
-								<dd>Medical imaging plays important role in development...</dd>
-							</dl>
-						</div>
-					</div>
-					<div class="msg-box">
-						<div class="msg-item msg-item-1">
-							<p class="txt">信息港</p>
-							<div class="sub-msg">
-								<ul>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-								</ul>
-								<p>信息港</p>
-							</div>
-						</div>
-						<div class="msg-item msg-item-2">
-							<p class="txt">分享（平台）</p>
-							<div class="sub-msg">
-								<ul>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-								</ul>
-								<p>分享（平台）</p>
-							</div>
-						</div>
-						<div class="msg-item msg-item-3">
-							<p class="txt">E-Library</p>
-							<div class="sub-msg">
-								<ul>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-								</ul>
-								<p>E-Library</p>
-							</div>
-						</div>
-						<div class="msg-item msg-item-4">
-							<p class="txt">更多</p>
-							<div class="sub-msg">
-								<ul>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-									<li><a href="">分享一</a></li>
-								</ul>
-								<p>更多</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="site-footer">
-			<div class="footer-con">
-				<div class="foot-link">
-					<a href="">Contact Us </a>|
-					<a href="">Feedback</a>
-				</div>
-				<p class="copyright">2013 Roche China Academy</p>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-	<script src="js/json2.js"></script>
-  	<script src="js/underscore-min.js"></script>
-  	<script src= "js/moment-2.2.1.js"></script>
-  	<script src="js/clndr.js"></script>
-  	<script src="js/jquery.fancybox.pack.js"></script>
-  	<script src="js/site.js"></script>
-</body>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Vincehu.github.com by VinceHu</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Vincehu.github.com</h1>
+        <h2>Do whatever you want.</h2>
+        <a href="https://github.com/VinceHu" class="button"><small>Follow me on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+        </section>
+
+        <aside id="sidebar">
+
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
 </html>
